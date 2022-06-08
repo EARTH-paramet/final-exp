@@ -66,10 +66,13 @@ const Search = (props) => {
             const items = [];
             querySnapshot.forEach((doc) => {
               console.log("search item=> ",doc.data());
-             
+              // if (doc.data().barcode == "") {
+              //   console.log("MASTER",doc.data())
+              // }
+              //  else {
                 items.push({id: doc.id, value: doc.data()});
                 console.log("search add Master items", doc.data());
-              
+              // }
             });
     console.log("TOTAL=> ",items)
             props.dispatch({
@@ -83,7 +86,16 @@ const Search = (props) => {
 
   const handleChange = (e) => {
     console.log(e.target.value);
-    
+    // ref
+    //   .where("uid", "==", props.data.uid)
+    //   .get()
+    //   .then((querySnapshot) => {
+    //     // let group = "null"
+    //     querySnapshot.forEach((doc) => {
+    //       console.log(doc.data());
+    //       group = doc.data().defaultGroup;
+    //     });
+    //   });
     if (e.target.value == "") {
       ref
         .doc(props.data.uid)

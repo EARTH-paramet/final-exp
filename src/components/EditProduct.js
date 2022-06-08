@@ -20,7 +20,12 @@ function EditProduct(props) {
   const [editData, setEditData] = useState(
     props.data.productData[useParams().id]
   )
-  
+  // console.log('editData', editData.value)
+  // console.log('editData', editData.id)
+  // console.log(
+  //   'editData',
+  //   editData.value.date.toDate().toLocaleString('en-CA').split(',')[0]
+  // )
   const [urlUpload, setUrlUpload, urlUploadRef] = useStateRef(
     editData.value.image
   )
@@ -232,19 +237,45 @@ function EditProduct(props) {
               </div>
               <div className='mb-3'>
                 <label className='form-label fw-bold'>Category</label>
-                
+                {/* <select
+                  onChange={(e) => handle(e)}
+                  id='category'
+                  class='form-select'
+                  style={{
+                    borderRadius: '20px',
+                    border: '1px solid rgb(255 195 0)',
+                  }}
+                  defaultValue={dataform.category}
+                >
+                  <option selected hidden>
+                    Open this select menu
+                  </option>
+                  <option defaultValue='Meat'>Meat</option>
+                  <option defaultValue='Fruit'>Fruit</option>
+                  <option defaultValue='Vegetable'>Vegetable</option>
+                </select> */}
                 <Select
                   styles={customStyles}
                   isSearchable={false}
                   options={options}
-                  
+                  // defaultValue={{ value: 'Meat', label: 'Meat' }}
                   defaultValue={options.filter(
                     ({ value }) => value === dataform.category
                   )}
                   // id='category'
                   onChange={(e) => handleChangeCategory(e)}
                 />
-               
+                {/* <input
+                  onChange={(e) => handle(e)}
+                  id='category'
+                  type='text'
+                  defaultValue={dataform.category}
+                  className='form-control'
+                  style={{
+                    borderRadius: '20px',
+                    border: '1px solid rgb(255 195 0)',
+                  }}
+                /> */}
               </div>
               <div className='mb-3'>
                 <label className='form-label fw-bold'>Description</label>

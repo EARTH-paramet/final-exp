@@ -26,7 +26,9 @@ const Profile = (props) => {
         <div className='container'>
           <div className='row'>
             <div className='col-6 mt-2'>
-              
+              {/* <NavLink to='/'>
+                <FontAwesomeIcon icon='fa-solid fa-arrow-left-long' size='xl' />
+              </NavLink> */}
             </div>
             <div className='col-6 mt-3'>
               <h2 className='text-end'>
@@ -67,7 +69,9 @@ const Profile = (props) => {
                     </div>
                     <div className='col-8 text-end'></div>
                   </div>
-                  
+                  {/* <div className='row'> */}
+                  {/* <button className='btn btn-primary'>history</button> */}
+                  {/* </div> */}
                 </div>
               </div>
             </div>
@@ -87,7 +91,7 @@ const Profile = (props) => {
         >
           <button className='btn btn-outline-danger m-3'>sign out</button>
         </NavLink>
-        <button
+        {/* <button
           className='btn btn-outline-warning m-3'
           onClick={() => {
             const ref = firebase.firestore().collection('product')
@@ -125,7 +129,7 @@ const Profile = (props) => {
           }}
         >
           delete product
-        </button>
+        </button> */}
       </section>
       {/* <footer>
         <NavBottomBar />

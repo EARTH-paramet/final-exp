@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 import useStateRef from "react-usestateref";
 const Filter = (props) => {
   const [modalOpen, setModalOpen] = useState(false);
+  //   const [modalData, setModalData] = useState({})
   const toggle = () => setModalOpen(!modalOpen);
   const [sortSelect, setSortSelect] = useState("ascName");
 
@@ -69,6 +70,7 @@ const Filter = (props) => {
       <FontAwesomeIcon
         icon="fa-solid fa-filter"
         onClick={() => {
+          //   setModalData(item)
           toggle();
         }}
       />

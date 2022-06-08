@@ -86,7 +86,31 @@ const ListCategory = ({ data }) => {
           </a>
         </div>
       ))}
-      
+      {/* <div>
+        <Modal size='xl' isOpen={modalOpen} toggle={() => toggle()}>
+          <ModalBody>
+            <div className='container'>
+              <h6 className='font-weight-bold'>Name: {modalData.name}</h6>
+              <h6 className='font-weight-bold'>Exp: {modalData.exp}</h6>
+              <h6 className='font-weight-bold'>Category: {modalData.cat}</h6>
+              <h6 className='font-weight-bold'>รายละเอียด</h6>
+              <p>{modalData.des}</p>
+              <div className='row py-2'>
+                <NavLink to={`/edit/1`}>
+                  <Button className='w-100' color='light text-dark'>
+                    Edit
+                  </Button>
+                </NavLink>
+              </div>
+              <div className='row py-2'>
+                <Button className='w-100' color='warning text-white'>
+                  Remove
+                </Button>
+              </div>
+            </div>
+          </ModalBody>
+        </Modal>
+      </div> */}
     </div>
   )
 }
